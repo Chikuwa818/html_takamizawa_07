@@ -1,0 +1,356 @@
+/* ここから下に記載していく */
+.wrap {
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+    /* background-color: grey; */
+    background-color: white;
+}
+
+.header {
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-right: 50px;
+    /* ← CONTACTの右に50px空間を作る */
+    box-sizing: border-box;
+    /* ← 背景が縮まらないようにする */
+}
+
+.header-left {
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between
+}
+
+.header-right {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    /* background-color: pink; */
+    margin: 0;
+    padding: 0;
+}
+
+.main-topics {
+    background-image: url("../img/mainbg.png");
+    /* ../らしい、css/style.cssだから1階層戻るために２つ必要 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px;
+    /* text-align: center; いらんはず*/
+    letter-spacing: 0.1em;
+    line-height: 60px;
+    font-size: 35px;
+    color: white;
+}
+
+.title-text {
+    /* font-weight: bold; */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#about {
+    padding-top: 60px;
+    text-align: center;
+    background-color: white;
+
+}
+
+.sub-topics-yellow {
+    font-size: 24px;
+    color: #ffd61a;
+    font-weight: bold;
+
+}
+
+.sub-topics-black {
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+}
+
+.mini-topics {
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.contents {
+    font-size: 14px;
+    color: black;
+    line-height: 1.8;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    /* background-color: aquamarine; */
+
+}
+
+
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.image-row img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#course {
+    padding-top: 60px;
+    background-color: white
+}
+
+.course-row {
+    background-color: #fafafa;
+    display: flex;
+}
+
+.course-row img {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.course-row:nth-of-type() {
+    flex-direction: row-reverse;
+}
+/* こいつで逆さまにできる、.course-rowの中の３番目のdivタグに影響だそう */
+
+.course-text {
+    width: 480px;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 120px;
+    padding-right: 50px;
+    padding-bottom: 120px;
+}
+
+.mini-course-text {
+    padding-top: 40px;
+}
+
+#news {
+    /* background-color: aquamarine; */
+    padding-top: 60px;
+}
+
+.news-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 60px;
+    gap: 30px;
+
+}
+
+.card {
+    width: 300px;
+}
+
+.news-list {
+    text-align: left;
+    padding-top: 30px;
+}
+
+#access {
+    padding-top: 60px;
+    background-color: #fafafa;
+}
+
+.map-image {
+    padding-top: 60px;
+}
+
+#contact {
+    padding-top: 40px;
+    /* background-color: chartreuse; */
+}
+
+
+
+.b-space40 {
+    margin-bottom: 40px;
+}
+
+.b-space60 {
+    margin-bottom: 60px;
+}
+
+.t-space30 {
+    padding-top: 30px;
+}
+
+
+/* フォーム部分 */
+
+/* フォーム全体,中央寄せと下余白 */
+.form {
+    width: 840px;
+    margin: 0 auto 140px;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-bottom: 16px;
+}
+
+/* 左（ラベル）/右（フィールド）は横並び */
+.label {
+    display: inline-block;
+    vertical-align: top;
+    width: 240px;
+    padding-right: 16px;
+    text-align: left;
+    vertical-align: top;
+    box-sizing: border-box;
+    color: black;
+    line-height: 36px;
+    /* 入力高さに合わせる */
+    word-break: break-all;
+    /* 長い日本語も折り返し */
+}
+
+.field {
+    display: inline-block;
+    vertical-align: top;
+    width: 328px;
+    text-align: left;
+}
+/* 右：幅328px */
+
+.check:nth-of-type(3) label {
+    white-space: nowrap;
+}
+
+
+
+/* テキスト・セレクトの共通（幅328px・高さ36px・枠#bfbfbf） */
+.field input[type="text"],
+.field select {
+    width: 328px;
+    height: 36px;
+    border: 1px solid #bfbfbf;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+/* テキストエリアの大きさ調整 */
+.field textarea {
+    width: 328px;
+    height: 120px;
+    border: 1px solid #bfbfbf;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* ── チェックボックス群の見た目・位置合わせ ── */
+
+/* 各チェック行は24px感覚で積む */
+.check {
+    margin-bottom: 24px;
+    margin-right: 40px;
+}
+
+/* チェックボックスの大きさ調整、右の余白調整 */
+.check input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 0 16px 0 0;
+}
+
+.check label {
+    display: inline-block;
+    line-height: 24px;
+    color: #333;
+}
+
+.submit {
+    margin-top: 30px;
+}
+
+.submit input[type="submit"] {
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+/* フッター例（既存クラスの体裁だけ） */
+.copy-rights {
+    color: #fff;
+    padding: 30px 0;
+    font-size: 14px;
+    margin: auto;
+    background-color: #707070;
+    text-align: center;
+}
+
+
+/* スクロール移動させるやーつ */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* 文字に動きつくやーつ */
+
+.header-right a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+}
+
+.header-right a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff701e;
+    transform: scaleX(0);
+    /* ←横方向だけ縮小 */
+    transform-origin: left center;
+    /* ←左から伸びる */
+    transition: transform 0.3s ease;
+}
+
+.header-right a:hover {
+    color: #ff701e;
+    /* 文字色も変化 */
+}
+
+.header-right a:hover::before {
+    transform: scaleX(1);
+    /* 左から右へシュッと */
+}
+
+/* 送信するのホバー時のアクション */
+.submit input[type="submit"]:hover {
+    background-color: #ffb400;
+    /* 少し濃い黄色 */
+    color: white;
+    transform: translateY(-2px);
+    /* 少し浮かせる */
+}
